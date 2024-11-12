@@ -1,0 +1,15 @@
+## .NET Core
+bin/
+obj/
+data/
+*.log
+
+## VS Code
+.vscode/
+*.code-workspace
+
+## Visual Studio
+.vs/
+*.user
+*.userosscache
+*.sln.docstates
