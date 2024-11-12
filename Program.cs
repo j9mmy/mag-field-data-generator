@@ -71,18 +71,18 @@ class Program
             
             long updateFrequency = Math.Max(1, rowAmount / 1000);
             
-            for (long i = 0; i < rowAmount; i++)
+            for (long i = 0; i <= rowAmount; i++)
             {
                 double result = (random.NextDouble() * range) + min;
                 sb.Clear()
                   .Append(i)
                   .Append(',')
-                  .Append(result.ToString(System.Globalization.CultureInfo.InvariantCulture));
+                  .Append(result.ToString(CultureInfo.InvariantCulture));
                 writer.WriteLine(sb);
     
                 if (i % updateFrequency == 0)
                 {
-                    Console.Write($"\rGenerating... {(i * 100.0 / rowAmount):F1}%");
+                    Console.Write($"\rGenerating... {i * 100.0 / rowAmount:F1}%");
                 }
             }
             
